@@ -1,0 +1,31 @@
+/* AboutUs.css */
+
+/* Apply background color to the root element (usually a div with id "root") */
+.Aboutuspage {
+    background-color: #a9c4e4; /* Your desired background color */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.containerAboutus {
+    background-color: #ffffff;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+
+}
+
+.social-icons .social-icon {
+    margin: 10px;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+.social-icons .social-icon:hover {
+    color: #0056b3;
+}

@@ -28,10 +28,11 @@ export const NavBar = (props) => {
             >
               <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <Link to="/" className="nav-link active" aria-current="page">
                     Home
-                  </a>
+                  </Link>
                 </li>
+
                 <li className="nav-item">
                   {props.userInfo ? (
                     <Link className="nav-link" onClick={props.logout}>
@@ -43,53 +44,14 @@ export const NavBar = (props) => {
                     </Link>
                   )}
                 </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Categories
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Store
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Product
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Service
-                      </a>
-                    </li>
-                    <li>
-                      <hr className="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Something else here
-                      </a>
-                    </li>
-                  </ul>
-                </li>
+
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    For Businesses
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link to="/about" className="nav-link">
                     About
-                  </a>
+                  </Link>
                 </li>
               </ul>
+
               <form className="d-flex" role="search">
                 <input
                   className="form-control me-2"
@@ -97,9 +59,6 @@ export const NavBar = (props) => {
                   placeholder="Search"
                   aria-label="Search"
                 />
-                <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
               </form>
             </div>
           </div>
