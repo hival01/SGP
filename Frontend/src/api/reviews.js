@@ -20,7 +20,7 @@ export const addReviewOfProduct = async (productId, comment) => {
 		`http://${config.server.HOST}:${config.server.PORT}/api/products/${productId}`,
 		{
 			// TODO:- Change the email
-			email: "test@email.com",
+			email: email ,
 			comment: comment,
 		}
 	);

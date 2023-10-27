@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 const ProductReview = () => {
 	const { productId } = useParams();
 	const [reviews, setReviews] = React.useState([]);
-	const [userEmail, setUserEmail] = useState("");
+	const [userEmail, setUserEmail] = React.useState("");
 
 	React.useEffect(() => {
 
