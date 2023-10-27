@@ -30,7 +30,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route
 					path="/product-review/:productId"
-					element={<ProductReview />}
+					element={<ProductReview userInfo={userInfo} />}
 				/>
         <Route path="/login" element={<Login setInfo={setInfo} />} />
       </Routes>
