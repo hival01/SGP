@@ -27,4 +27,3 @@ import "./AboutUs.css"; // Import your custom CSS file
   );
 }
 
-export default AboutUs;
