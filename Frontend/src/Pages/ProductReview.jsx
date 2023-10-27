@@ -1,25 +1,33 @@
 import { useParams } from "react-router-dom";
 import { addReviewOfProduct, getReviewOfProduct } from "../api/reviews";
+import AuthService from "../services/AuthService"; 
 import "./ProductReview.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const ProductReview = () => {
 	const { productId } = useParams();
 	const [reviews, setReviews] = React.useState([]);
+	const [userEmail, setUserEmail] = useState("");
 
 	React.useEffect(() => {
+		const userEmail = AuthService.getUserEmail();
+		if (userEmail) {
+			setUserEmail(userEmail);
+		  }
 		getReviewOfProduct(productId).then((response) => {
 			setReviews(response);
 		});
 	}, []);
 
+
+
 	const handleAddReview = (e) => {
 		e.preventDefault();
-		addReviewOfProduct(productId, e.target[0].value,);
+		addReviewOfProduct(productId, e.target[0].value,userEmail);
 		// TODO:- Add Email here
 		setReviews((prev) => [
 			...prev,
-			{ comment: e.target[0].value, email: "" },
+			{ comment: e.target[0].value, email: userEmail},
 		]);
 	};
 
@@ -45,8 +53,15 @@ const ProductReview = () => {
 				<h2>Current Reviews</h2>
 				<ul>
 					{reviews.map((review, index) => (
-						<li key={index}>{review.comment}</li>
+
+						<li key={index}> 
+						<p><strong>Email:</strong> {review.email}</p>
+						<p><strong>Comment:</strong> {review.comment}</p>
+						</li>
 					))}
+					
+					
+
 				</ul>
 			</div>
 		</div>
