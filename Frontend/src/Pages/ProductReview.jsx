@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom";
-import { addReviewOfProduct, getReviewOfProduct } from "../api/reviews";
-import AuthService from "../services/AuthService"; 
+import { addReviewOfProduct, getReviewOfProduct, getIdOfUser } from "../api/reviews";
 import "./ProductReview.css";
 import React, { useEffect, useState } from "react";
 
@@ -10,10 +9,10 @@ const ProductReview = () => {
 	const [userEmail, setUserEmail] = useState("");
 
 	React.useEffect(() => {
-		const userEmail = AuthService.getUserEmail();
-		if (userEmail) {
-			setUserEmail(userEmail);
-		  }
+
+		getIdOfUser(productId).then((response) => {
+			setUserEmail(response.email);
+		});
 		getReviewOfProduct(productId).then((response) => {
 			setReviews(response);
 		});
