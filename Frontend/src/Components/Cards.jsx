@@ -1,8 +1,11 @@
 import React from "react";
 import { Card } from "./Card";
-import jordan from "../assets/jordan.jpeg";
-import iceburg from "../assets/iceburg.jpeg";
-import zara from "../assets/zara.jpeg";
+import jordan from "../assets/jordan.jpg";
+import WaterBottel from "../assets/WaterBottel.jpg";
+import Airpod from "../assets/Airpod.jpg";
+import Watch from "../assets/Watch.jpg";
+import Macbook from "../assets/Macbook.jpg";
+import WomenWatch from "../assets/WomenWatch.jpg";
 
 export const Cards = () => {
 	return (
@@ -11,39 +14,39 @@ export const Cards = () => {
 				<div className="container">
 					<div className="row gy-5 d-flex ">
 						<Card
-							photo={jordan}
-							desc={`The Jordan 1 Retro High "Bred Toe" available at Stadium Goods is a timeless sneaker combining classic colors and high-quality condition. gives luxurious feel.`}
-							name="Jordan"
+							photo={Watch}
+							desc={`Fastrack Blue Dial Analog Watch for Men  : NR3290SM01 - A sleek and stylish timepiece designed for men.`}
+							name="Watch"
 							id={1}
 						></Card>
 						<Card
-							photo={iceburg}
-							desc={`Iceburg, the juice store in college, serves up refreshing and delicious beverages to keep students energized.`}
-							name="Ice Burg"
+							photo={Macbook}
+							desc={`Apple MacBook Air M1: 13.3" Retina, 8GB RAM, 256GB SSD, Space Grey, Touch ID, iPhone/iPad compatibility.`}
+							name="Macbook"
 							id={2}
 						></Card>
 						<Card
-							photo={zara}
-							desc={`Zara shopping offers contemporary fashion enthusiasts a wide selection ofstylish clothing and accessories with a modern edge.`}
-							name="zara"
+							photo={Airpod}
+							desc={`boAt Airdopes 141: Truly wireless in-ear headphones,45 hours of playtime,smooth touch control`}
+							name="Airpod"
 							id={3}
 						></Card>
 						<Card
 							photo={jordan}
-							desc={`The Jordan 1 Retro High "Bred Toe" available at Stadium Goods is a timeless sneaker combining classic colors and high-quality condition.`}
-							name="Jordan"
+							desc={`Red Tape Men's Casual Sneaker Shoes: comfort with cushioned insole and slip-resistant design.`}
+							name="Shose"
 							id={4}
 						></Card>
 						<Card
-							photo={jordan}
-							desc={`The Jordan 1 Retro High "Bred Toe" available at Stadium Goods is a timeless sneaker combining classic colors and high-quality condition.`}
-							name="Jordan"
+							photo={WaterBottel}
+							desc={`CELLO Puro Sports 900: Set of 2 water bottles, featuring inner steel and outer plastic construction.`}
+							name="Water Bottel"
 							id={5}
 						></Card>
 						<Card
-							photo={jordan}
-							desc={`The Jordan 1 Retro High "Bred Toe" available at Stadium Goods is a timeless sneaker combining classic colors and high-quality condition.`}
-							name="Jordan"
+							photo={WomenWatch}
+							desc={`SWADESI STUFF Premium Leather Strap Watch: Stylish analog watch with a multi-color flower dial.`}
+							name="Women Watch"
 							id={6}
 						></Card>
 					</div>

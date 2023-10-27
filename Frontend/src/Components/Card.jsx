@@ -23,13 +23,13 @@ export const Card = (props) => {
 					<div className="card-body">
 						<h5 className="card-title">{props.name}</h5>
 						<p className="card-text">{props.desc}</p>
-						<button
+						<button 
 							onClick={() =>
 								navigate(`/product-review/${props.id}`)
 							}
 							className="btn btn-primary"
 						>
-							Give Review
+							Reviews
 						</button>
 					</div>
 				</div>

@@ -5,9 +5,6 @@ import "./loginpage.css";
 import { useNavigate } from "react-router-dom";
 
 export const Login = (props) => {
-  const style = {
-    border: "2px solid black",
-  };
 
   let initState = {
     email: "",
@@ -34,12 +31,6 @@ export const Login = (props) => {
 
     const user = res.data.user;
 
-    // if (!user) {
-    //   setDesc(
-    //     "Account with provided email or username doesn't exists, please create a new account."
-    //   );
-    //   return setShow(true);
-    // }
     if (user) {
       if (state.password !== user.password) {
         setDesc("Password doesn't match, please try again");
@@ -64,7 +55,7 @@ export const Login = (props) => {
       <ErrorToast desc={desc} show={show} setShow={setShow} />
       <section className="loginpage">
         <div className="container d-flex min-vh-100 justify-content-center align-item-center">
-          <form className="card p-3" style={style} onSubmit={handleSubmit}>
+          <form className="card p-3" style={{ border: "2px solid black" }} onSubmit={handleSubmit}>
             <div className="mb-3">
               <label className="form-label">Email address</label>
               <input
@@ -79,7 +70,7 @@ export const Login = (props) => {
                 We'll never share your email with anyone else.
               </div>
             </div>
-            <div className="mb-3">
+            <div className="mb-5">
               <label className="form-label">Password</label>
               <input
                 type="password"

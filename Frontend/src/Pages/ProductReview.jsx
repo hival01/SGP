@@ -30,7 +30,6 @@ const ProductReview = ({ userInfo }) => {
 	}
     e.preventDefault();
     addReviewOfProduct(productId, e.target[0].value, userInfo.email);
-    // TODO:- Add Email here
     setReviews((prev) => [
       ...prev,
       { comment: e.target[0].value, email: userInfo.email },

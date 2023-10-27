@@ -1,16 +1,14 @@
-/* AboutUs.css */
-
-/* Apply background color to the root element (usually a div with id "root") */
 .Aboutuspage {
-    background-color: #a9c4e4; /* Your desired background color */
+    background-color: #a9c4e4; 
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
 .containerAboutus {
+    margin: 100px;
+    padding: 30px;
     background-color: #ffffff;
     border: 2px solid #000;
     border-radius: 10px;

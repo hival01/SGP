@@ -19,7 +19,6 @@ export const addReviewOfProduct = async (productId, comment, email) => {
   await axios.post(
     `http://${config.server.HOST}:${config.server.PORT}/api/products/${productId}`,
     {
-      // TODO:- Change the email
       email,
       comment,
     }
