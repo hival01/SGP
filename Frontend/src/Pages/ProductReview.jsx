@@ -22,18 +22,22 @@ const ProductReview = ({ userInfo }) => {
   }, []);
 
   const handleAddReview = (e) => {
-    console.log(userInfo);
 	if(userInfo === null)
 	{
 		alert("Login first!")
 		return;
 	}
     e.preventDefault();
-    addReviewOfProduct(productId, e.target[0].value, userInfo.email);
-    setReviews((prev) => [
-      ...prev,
-      { comment: e.target[0].value, email: userInfo.email },
-    ]);
+    
+    const reviewText = e.target[0].value;
+    if (reviewText) {
+      addReviewOfProduct(productId, reviewText, userInfo.email);
+      e.target[0].value = "";
+      setReviews((prev) => [
+        ...prev,
+        { comment: reviewText, email: userInfo.email },
+      ]);
+    }
   };
 
   return (
@@ -45,7 +49,7 @@ const ProductReview = ({ userInfo }) => {
           <h2>Add a Review</h2>
           <form id="reviewForm" onSubmit={handleAddReview}>
             <label htmlFor="reviewText">Your Review:</label>
-            <textarea id="reviewText" name="reviewText" required></textarea>
+            <textarea className="p-2" id="reviewText" name="reviewText" required  style={{ cursor: 'text' }}></textarea>
             <button type="submit">Submit Review</button>
           </form>
         </div>
@@ -56,10 +60,10 @@ const ProductReview = ({ userInfo }) => {
             {reviews.map((review, index) => (
               <li key={index}>
                 <p>
-                  <strong>Email:</strong> {review.email}
+                  <strong>Review : </strong> {review.comment}
                 </p>
                 <p>
-                  <strong>Comment:</strong> {review.comment}
+                  <strong>~ </strong> {review.email}
                 </p>
               </li>
             ))}

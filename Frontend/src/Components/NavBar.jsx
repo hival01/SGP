@@ -8,9 +8,9 @@ export const NavBar = (props) => {
       <header>
         <nav className="navbar navbar-expand-lg bg-dark navbar-dark fixed-top ">
           <div className="container-fluid bg-dark">
-            <a className="navbar-brand" href="#">
-              ReviewAnything
-            </a>
+            <Link to="/" className="navbar-brand">
+                  ReviewAnything
+            </Link>
             <button
               className="navbar-toggler"
               type="button"

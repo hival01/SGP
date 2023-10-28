@@ -22,25 +22,25 @@ export const Cards = () => {
 						<Card
 							photo={Macbook}
 							desc={`Apple MacBook Air M1: 13.3" Retina, 8GB RAM, 256GB SSD, Space Grey, Touch ID, iPhone/iPad compatibility.`}
-							name="Macbook"
+							name="MacBook"
 							id={2}
 						></Card>
 						<Card
 							photo={Airpod}
 							desc={`boAt Airdopes 141: Truly wireless in-ear headphones,45 hours of playtime,smooth touch control`}
-							name="Airpod"
+							name="Airdope"
 							id={3}
 						></Card>
 						<Card
 							photo={jordan}
 							desc={`Red Tape Men's Casual Sneaker Shoes: comfort with cushioned insole and slip-resistant design.`}
-							name="Shose"
+							name="Shoes"
 							id={4}
 						></Card>
 						<Card
 							photo={WaterBottel}
 							desc={`CELLO Puro Sports 900: Set of 2 water bottles, featuring inner steel and outer plastic construction.`}
-							name="Water Bottel"
+							name="Water Bottle"
 							id={5}
 						></Card>
 						<Card
