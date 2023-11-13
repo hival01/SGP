@@ -25,6 +25,7 @@ export const AboutUs = () => {
           <p>Contact Us</p>
           <div className="social-icons ">
             <a
+              target="_blank"
               href="https://www.linkedin.com/in/hival-patel-657654249"
               className="social-icon"
             >
@@ -33,6 +34,7 @@ export const AboutUs = () => {
             <a
               href="https://www.instagram.com/hival_01"
               className="social-icon"
+              target="_blank"
             >
               <i className="fab fa-instagram fa-3x"></i>
             </a>
